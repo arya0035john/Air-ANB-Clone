@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Listing</title>
+</head>
+<body>
+    <h2><%= list.title %></h2>
+    <hr>
+    Description : <%= list.description %>
+    <br>
+    <img src="<%=list.image.url%>" alt="">
+    <br>
+    Price : &#8377; <%= (list.price).toLocaleString("en-IN") %>
+    <br>
+    Location : <%= list.location  %>
+    <br>
+    Country : <%= list.country %>
+
+    <form method="get" action="/listing/<%=list._id %>/edit">
+        <button>Edit</button>
+    </form>
+</body>
+</html>
