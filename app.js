@@ -4,11 +4,14 @@ const mongoose = require("mongoose");
 const listing = require("../Major Project/models/listings");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
+app.engine("ejs",ejsMate);
 app.use(methodOverride("_method"));
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname,"/public")));
 
 main().then(()=>{
     console.log("Connected to DB");
@@ -48,7 +51,7 @@ app.put("/listing/:id",async(req,res)=>{
     res.redirect("/listing");
 });
 
-app.post("/listing/:id/delete",async(req,res)=>{
+app.delete("/listing/:id/delete",async(req,res)=>{
     let {id} = req.params;
     await listing.findByIdAndDelete(id);
     res.redirect("/listing")

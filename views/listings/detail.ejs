@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Listing</title>
-</head>
+<% layout('layouts/boilerplate') %>
 <body>
     <h2><%= list.title %></h2>
     <hr>
@@ -21,5 +15,7 @@
     <form method="get" action="/listing/<%=list._id %>/edit">
         <button>Edit</button>
     </form>
+    <form method="post" action="/listing/<%=list._id %>/delete?_method=delete">
+        <button>Delete</button>
+    </form>
 </body>
-</html>
