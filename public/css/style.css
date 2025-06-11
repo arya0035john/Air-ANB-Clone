@@ -1,0 +1,59 @@
+.navbar {
+    background-color: white !important;
+    height: 5rem;
+}
+
+.navbar-brand{
+    color:tomato;
+    font-size:2rem;
+    margin-left: 5px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.nav-item{
+    color:black;
+}
+
+.text-body{
+    text-decoration: none;
+}
+
+.text-body:hover{
+    text-decoration: underline;
+}
+
+.card{
+    border:none;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius:1rem;
+    width:100%;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.listing_link{
+    text-decoration: none;
+}
+
+.listing_link:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-img-overlay:hover{
+    background-color: white;
+    opacity: 0.2;
+}
+
+.create{
+
+}
+
+.createHead{
+    justify-content: center;
+}
