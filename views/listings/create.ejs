@@ -1,24 +1,39 @@
 <% layout('layouts/boilerplate') %>
 <body>
+    <div class="row"></div>
+    <div class="col-8 offset-2">
     <form method="post" action="/listings">
-        <h1 id="createHead">Create new Listing</h1>
-        <h2 class="create">Enter the title : </h2>
-        <input name="title" type="text">
-        <br>
-        <h2 class="create">Enter the description : </h2>
-        <input name="description" type="text">
-        <br>
-        <h2 class="create">Enter the Image url : </h2>
-        <input name="image" type="text">
-        <br>
-        <h2 class="create">Enter the Price : </h2>
-        <input name = "price" type="number">
-        <br>
-        <h2 class="create">Enter the location : </h2>
-        <input name = "location" type="text">
-        <br>
-        <h2 class="create">Enter the Country : </h2>
-        <input name = "country" type="text">
-        <button>Submit</button>
+        
+        <h3 id="createHead">Create new Listing</h3>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title : </label>
+            <input name="title" class="form-control" placeholder="Enter title" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description : </label>
+            <textarea name="description" type="text" class="form-control" placeholder="Enter description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL : </label>
+            <input name="image" type="text" class="form-control" placeholder="Enter URL of the image">
+        </div>
+        <div class="mb-3">
+        <label for="price" class="form-label">Price : </label>
+        <input name = "price" type="number" class="form-control" placeholder="Enter price">
+    </div>
+    
+        <div class="mb-3">
+        <label for="location" class="form-label">Location : </label>
+        <input name = "location" type="text" placeholder="Enter location" class="form-control">
+    </div>
+        <div class="mb-3">
+        <label for="country" class="form-label">Country : </label>
+        <input name = "country" type="text" class="form-control" placeholder="Enter Country name">
+
+    </div>
+        <button class="btn btn-dark" style="background-color: tomato; border: none;">Submit</button>
+    
     </form>
+</div>
+</div>
 </body>

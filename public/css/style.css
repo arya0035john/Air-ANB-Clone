@@ -10,6 +10,12 @@
     font-family: "Times New Roman", Times, serif;
 }
 
+.navbar-brand:hover{
+    /* background-color: transparent !important; */
+    color: tomato;
+    text-decoration: none;
+}
+
 .nav-item{
     color:black;
 }
@@ -50,10 +56,20 @@
     opacity: 0.2;
 }
 
-.create{
+/* .create{
 
-}
+} */
 
 .createHead{
     justify-content: center;
 }
+
+.btn{
+    background-color: tomato;
+    border: none;
+}
+
+#detailDel{
+    background-color: black;
+}
+
