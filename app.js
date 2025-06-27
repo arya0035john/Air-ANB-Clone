@@ -84,9 +84,9 @@ app.use((req, res, next) => {
 });
 
 // Home route
-// app.get("/", (req, res) => {
-//   res.send("Working well");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listing");
+});
 
 // SignUp route
 
