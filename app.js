@@ -21,9 +21,6 @@ const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review");
 const userRouter = require("./routes/user");
 
-
-
-
 app.engine("ejs", ejsMate);
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
@@ -32,22 +29,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
 
 const dbUrl = process.env.dbUrl;
-const secret = process.env.SECRET;
+const secretCode = process.env.SECRET;
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   crypto:{
-    secret: secret
+    secret: secretCode
   },
   touchAfter: 24*3600
 })
 
-store.on("error",()=>{
+store.on("error",(err)=>{
   console.log("Something went wrong in Atlas database",err);
 })
 
 const sessionOptions = {
-  secret: secret,
+  secret: secretCode,
   resave: false,
   saveUninitialized: true,
   cookie: {
