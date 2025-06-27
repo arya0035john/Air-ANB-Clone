@@ -1,6 +1,6 @@
 const listing = require("./models/listings");
-const {listingEditSchema, listingSchema,reviewSchema} = require("../Major Project/schema");
-const ExpressError = require("../Major Project/utils/ExpressError");
+const {listingEditSchema, listingSchema,reviewSchema} = require("./schema");
+const ExpressError = require("./utils/ExpressError");
 
 // const passport = require("passport");
 
